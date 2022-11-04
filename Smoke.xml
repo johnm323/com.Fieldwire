@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <listeners>
+        <listener class-name="com.fieldwire.util.ExtentReporterNG"></listener>
+        <listener class-name="com.fieldwire.util.Listeners"></listener>
+    </listeners>
+
+    <test name="Smoke Test">
+        <groups>
+            <run>
+                <exclude name="regression"  />
+            </run>
+        </groups>
+
+        <classes>
+            <class name="com.fieldwire.testcases.CreateProjectTest"></class>
+            <class name="com.fieldwire.testcases.LoginTest"></class>
+            <class name="com.fieldwire.testcases.SignUpTest"></class>
+            <class name="com.fieldwire.testcases.TaskActivitiesTest"></class>
+        </classes>
+    </test>
+
+</suite>
